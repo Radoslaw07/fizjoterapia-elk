@@ -7,224 +7,370 @@
   <meta name="description" content="Gabinet fizjoterapii w Ełku oraz rehabilitacja z dojazdem do domu (Ełk, Olecko, Gołdap, Giżycko, Grajewo, Prostki, Rajgród, Augustów, Suwałki, Stare Juchy, Wydminy). Skuteczna terapia bólu kręgosłupa, rwy kulszowej, dyskopatii i stawów.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
-  <!-- Top Trust & Verification Bar -->
-  <div class="top-bar">
-    <div class="container top-bar__inner">
-      <div class="top-bar__credentials">
-        <span class="credential-pill">
-          <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-          Prawo Wykonywania Zawodu KIF: <strong class="mono">PWZFz 41892</strong>
-        </span>
-        <span class="credential-pill">
-          <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h6"/></svg>
-          Podmiot Leczniczy RPWDL: <strong class="mono">000000264819</strong>
-        </span>
-        <span class="credential-pill hide-sm">
-          <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Gabinet: <strong>Ełk, ul. Armii Krajowej 24/2</strong> + Dojazd w całym regionie
-        </span>
-      </div>
-      <div class="top-bar__hours">
-        <span class="status-dot" aria-hidden="true"></span>
-        <span>Rejestracja Pn–Sb: <strong class="mono">08:00 – 20:00</strong></span>
-      </div>
-    </div>
+  <!-- Ambient Framer-style Background Mesh & Subtle Architectural Grid -->
+  <div class="ambient-canvas" aria-hidden="true">
+    <div class="ambient-glow ambient-glow--top"></div>
+    <div class="ambient-glow ambient-glow--mid"></div>
+    <div class="ambient-grid"></div>
   </div>
 
-  <!-- Sticky Navigation Header -->
+  <!-- FLOATING PILL NAVBAR (Titan Intake / Framer SaaS Style) -->
   <header class="site-header" id="top">
-    <div class="container site-header__inner">
-      <a href="#top" class="brand" aria-label="mgr Michał Kowalski Fizjoterapia - strona główna">
-        <div class="brand__mark" aria-hidden="true">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/>
-            <circle cx="12" cy="12" r="4"/>
-          </svg>
-        </div>
-        <div class="brand__text">
-          <span class="brand__name">mgr Michał Kowalski</span>
-          <span class="brand__sub">Fizjoterapia Kręgosłupa i Stawów • Ełk</span>
-        </div>
-      </a>
-
-      <nav class="main-nav" aria-label="Główna nawigacja">
-        <ul class="main-nav__list">
-          <li><a href="#diagnoza">Objawy</a></li>
-          <li><a href="#oferta">Usługi i cennik</a></li>
-          <li><a href="#kwalifikacje">Kwalifikacje</a></li>
-          <li><a href="#realizacje">Przypadki kliniczne</a></li>
-          <li><a href="#obszar">Obszar i kalkulator</a></li>
-          <li><a href="#opinie">Opinie</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-actions">
-        <a href="tel:+48512840920" class="btn btn--call" aria-label="Zadzwoń teraz pod numer 512 840 920">
-          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span>Zadzwoń: <strong class="mono">512 840 920</strong></span>
+    <div class="nav-pill-wrapper">
+      <div class="nav-pill">
+        <a href="#top" class="brand" aria-label="mgr Michał Kowalski Fizjoterapia - strona główna">
+          <div class="brand__mark" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/>
+              <circle cx="12" cy="12" r="3.5"/>
+            </svg>
+          </div>
+          <div class="brand__text">
+            <span class="brand__name">mgr Michał Kowalski</span>
+            <span class="brand__tag mono">PWZFz 41892 • Ełk</span>
+          </div>
         </a>
-        <a href="#rezerwacja" class="btn btn--primary">
-          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          <span>Umów wizytę</span>
-        </a>
+
+        <nav class="main-nav" aria-label="Główna nawigacja">
+          <ul class="main-nav__list">
+            <li><a href="#porownanie">Standard terapii</a></li>
+            <li><a href="#diagnoza">Diagnostyka bólu</a></li>
+            <li><a href="#oferta">Oferta i cennik</a></li>
+            <li><a href="#kwalifikacje">Kwalifikacje KIF</a></li>
+            <li><a href="#realizacje">Przypadki</a></li>
+            <li><a href="#obszar">Strefy i kalkulator</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="tel:+48512840920" class="btn btn--ghost-pill" aria-label="Zadzwoń teraz pod numer 512 840 920">
+            <span class="live-dot" aria-hidden="true"></span>
+            <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span class="mono">512 840 920</span>
+          </a>
+          <a href="#rezerwacja" class="btn btn--dark-pill">
+            <span>Umów wizytę</span>
+            <span class="btn__arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- HERO SECTION -->
+    <!-- ======================================================================
+         1. TITAN-STYLE CENTERED HERO + INTERACTIVE CLINICAL DASHBOARD SHOWCASE
+         ====================================================================== -->
     <section class="hero">
-      <div class="container hero__grid">
-        <div class="hero__content">
-          <div class="eyebrow-badge">
-            <span class="eyebrow-badge__dot" aria-hidden="true"></span>
-            Gabinet w Ełku + Wizyty Domowe (Mazury i Suwalszczyzna)
-          </div>
+      <div class="container">
+        <div class="hero__center">
+          <a href="#obszar" class="announcement-pill">
+            <span class="announcement-pill__badge mono">GABINET + DOJAZD</span>
+            <span>Ełk, Olecko, Giżycko, Suwałki, Augustów, Gołdap, Grajewo i okolice</span>
+            <span aria-hidden="true">→</span>
+          </a>
 
           <h1 class="hero__title">
-            Skuteczna terapia <span class="text-highlight">bólu kręgosłupa i stawów</span> — wróć do życia bez blokad i leków
+            Precyzyjna diagnostyka bólu.<br>
+            <span class="text-gradient">Szybszy powrót do sprawności.</span>
           </h1>
 
           <p class="hero__lead">
-            Specjalizuję się w leczeniu dyskopatii, rwy kulszowej, napięciowych bólów głowy oraz stanów przeciążeniowych stawów. Przyjmuję stacjonarnie w nowoczesnym gabinecie w <strong>Ełku</strong> oraz dojeżdżam z pełnym wyposażeniem do pacjentów w <strong>Olecku, Gołdapi, Giżycku, Grajewie, Prostkach, Rajgrodzie, Augustowie, Suwałkach, Starych Juchach i Wydminach</strong>.
+            Skuteczna terapia manualna <strong>dyskopatii, rwy kulszowej, napięciowych bólów głowy oraz stawów obwodowych</strong> — bez blokad sterydowych i wielomiesięcznych kolejek. Przyjmuję stacjonarnie w <strong>Ełku</strong> oraz dojeżdżam z mobilnym stołem rehabilitacyjnym do pacjentów w całym regionie.
           </p>
 
-          <ul class="hero__guarantees" aria-label="Gwarancje standardu medycznego">
-            <li>
-              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>
-              <span><strong>45–60 min</strong> indywidualnej pracy 1-na-1 z magistrem fizjoterapii</span>
-            </li>
-            <li>
-              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>
-              <span>Odczuwalna ulga w bólu już po <strong>1–2 wizycie</strong> (terapia celowana)</span>
-            </li>
-            <li>
-              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>
-              <span>Pilne terminy w stanach ostrych („postrzał", rwa) nawet <strong>w 24h</strong></span>
-            </li>
-            <li>
-              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>
-              <span>Pełna dokumentacja medyczna i faktura do ubezpieczalni (PZU, LuxMed, Allianz)</span>
-            </li>
-          </ul>
-
-          <div class="hero__cta-row">
-            <a href="#rezerwacja" class="btn btn--primary btn--lg">
-              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
-              Umów wizytę (od 170 zł)
+          <div class="hero__cta-group">
+            <a href="#rezerwacja" class="btn btn--primary-pill btn--lg">
+              <span>Umów wizytę (od 170 zł)</span>
+              <span class="btn__arrow" aria-hidden="true">→</span>
             </a>
-            <a href="tel:+48512840920" class="btn btn--call-outline btn--lg">
-              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              Zadzwoń: <span class="mono">+48 512 840 920</span>
+            <a href="tel:+48512840920" class="btn btn--surface-pill btn--lg">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>Zadzwoń: <strong class="mono">+48 512 840 920</strong></span>
             </a>
           </div>
 
-          <div class="hero__trust-strip">
-            <div class="trust-avatars" aria-hidden="true">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="" width="38" height="38">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="" width="38" height="38">
-              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80" alt="" width="38" height="38">
-              <span class="trust-avatars__more mono">+1.4k</span>
-            </div>
-            <div class="trust-rating">
-              <div class="stars" aria-label="Ocena 5.0 na 5 gwiazdek">★★★★★ <strong class="mono">5.0/5</strong></div>
-              <p>Ponad <strong>1 450 przeprowadzonych terapii</strong> w powiecie ełckim i sąsiednich</p>
-            </div>
+          <div class="hero__compliance-pills" aria-label="Potwierdzone uprawnienia medyczne">
+            <span class="compliance-chip">
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              KIF: <strong class="mono">PWZFz 41892</strong>
+            </span>
+            <span class="compliance-chip">
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h6"/></svg>
+              Podmiot Leczniczy: <strong class="mono">RPWDL 000000264819</strong>
+            </span>
+            <span class="compliance-chip">
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg>
+              Polisa OC: <strong class="mono">450 000 PLN</strong>
+            </span>
+            <span class="compliance-chip">
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Stany ostre („postrzał”, rwa): <strong class="mono">w 24h</strong>
+            </span>
           </div>
         </div>
 
-        <div class="hero__visual">
-          <figure class="hero-card">
-            <img
-              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=85"
-              alt="Fizjoterapeuta mgr Michał Kowalski podczas precyzyjnej terapii manualnej odcinka szyjnego i kręgosłupa pacjenta"
-              width="640"
-              height="540"
-              fetchpriority="high"
-              class="hero-card__img"
-            >
-            <figcaption class="hero-card__caption">
-              <div>
-                <strong>mgr Michał Kowalski</strong>
-                <span>Specjalista terapii manualnej kręgosłupa i stawów • 11 lat praktyki klinicznej</span>
+        <!-- FRAMER-STYLE DOUBLE-BEZEL DASHBOARD / CLINICAL SHOWCASE FRAME -->
+        <div class="showcase-shell">
+          <div class="showcase-window">
+            <div class="showcase-window__topbar">
+              <div class="window-dots" aria-hidden="true">
+                <span></span><span></span><span></span>
               </div>
-              <span class="caption-tag mono">PWZFz 41892</span>
-            </figcaption>
-          </figure>
+              <div class="window-title mono">
+                PRO-REHAB CLINICAL PROTOCOL • EŁK, UL. ARMII KRAJOWEJ 24/2 • SESJA 1-NA-1 (55–60 MIN)
+              </div>
+              <div class="window-status">
+                <span class="live-dot" aria-hidden="true"></span>
+                <span class="mono">Rejestracja aktywna: Pn–Sb 08:00–20:00</span>
+              </div>
+            </div>
 
-          <!-- Floating Proof Badges -->
-          <div class="floating-badge floating-badge--top">
-            <div class="floating-badge__icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-            </div>
-            <div>
-              <span class="floating-badge__label">Certyfikowany terapeuta</span>
-              <strong class="floating-badge__val">McKenzie • Kaltenborn • Mulligan</strong>
-            </div>
-          </div>
+            <div class="showcase-window__grid">
+              <!-- Left Column inside Showcase: Clinical Intake Workflow Steps -->
+              <div class="showcase-panel">
+                <div class="showcase-panel__hdr">
+                  <span class="showcase-label mono">PRZEBIEG WIZYTY KLINICZNEJ</span>
+                  <span class="showcase-badge mono">100% indywidualnie</span>
+                </div>
 
-          <div class="floating-badge floating-badge--bottom">
-            <div class="floating-badge__icon floating-badge__icon--amber" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
-            </div>
-            <div>
-              <span class="floating-badge__label">Mobilny Gabinet Rehabilitacji</span>
-              <strong class="floating-badge__val">Dojazd do 11 miast w regionie</strong>
+                <div class="intake-pipeline">
+                  <div class="pipeline-item is-complete">
+                    <div class="pipeline-item__icon">01</div>
+                    <div class="pipeline-item__body">
+                      <strong>Analiza badań MRI / RTG i wywiad bólowy</strong>
+                      <span>Ocena krążków międzykręgowych L4-L5-S1 / C2-C7 i testów neurologicznych</span>
+                    </div>
+                    <span class="pipeline-tag mono">15 min</span>
+                  </div>
+
+                  <div class="pipeline-item is-active">
+                    <div class="pipeline-item__icon">02</div>
+                    <div class="pipeline-item__body">
+                      <strong>Celowana terapia manualna i odbarczenie nerwu</strong>
+                      <span>Metoda McKenziego, mobilizacje Kaltenborn-Evjenth, Mulligan i powięź FDM</span>
+                    </div>
+                    <span class="pipeline-tag pipeline-tag--teal mono">35 min</span>
+                  </div>
+
+                  <div class="pipeline-item">
+                    <div class="pipeline-item__icon">03</div>
+                    <div class="pipeline-item__body">
+                      <strong>Plan autoterapii domowej i ergonomii</strong>
+                      <span>2–3 celowane ćwiczenia (5 min dziennie) zapobiegające nawrotom bólu</span>
+                    </div>
+                    <span class="pipeline-tag mono">10 min</span>
+                  </div>
+                </div>
+
+                <div class="showcase-telemetry">
+                  <div class="telemetry-box">
+                    <span class="telemetry-box__label">Średnia redukcja bólu (skala VAS)</span>
+                    <div class="telemetry-box__val">
+                      <span class="vas-chip vas-chip--bad mono">VAS 8.6</span>
+                      <span aria-hidden="true">→</span>
+                      <span class="vas-chip vas-chip--good mono">VAS 1.2</span>
+                    </div>
+                  </div>
+                  <div class="telemetry-box">
+                    <span class="telemetry-box__label">Średnia liczba wizyt w stanie ostrym</span>
+                    <strong class="telemetry-box__big mono">2–4 sesje</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column inside Showcase: Real Clinical Photography + Floating Proof -->
+              <figure class="showcase-photo-card">
+                <img
+                  src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=85"
+                  alt="Fizjoterapeuta mgr Michał Kowalski podczas precyzyjnej terapii manualnej odcinka szyjnego i kręgosłupa pacjenta"
+                  width="640"
+                  height="460"
+                  fetchpriority="high"
+                  class="showcase-photo-card__img"
+                >
+                <figcaption class="showcase-photo-card__overlay">
+                  <div class="overlay-doctor">
+                    <strong>mgr Michał Kowalski</strong>
+                    <span>Magister Fizjoterapii (UMed Białystok) • 11+ lat praktyki klinicznej</span>
+                  </div>
+                  <div class="overlay-rating mono">
+                    ★ 5.0/5 (1 450+ terapii)
+                  </div>
+                </figcaption>
+              </figure>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Metrics Bar -->
-      <div class="container">
-        <dl class="metrics-bar" aria-label="Kluczowe wskaźniki praktyki fizjoterapeutycznej">
-          <div class="metrics-bar__item">
-            <dt>Doświadczenie kliniczne</dt>
-            <dd class="mono">11+ lat</dd>
-            <span class="metrics-bar__note">Pracy z pacjentami bólowymi i ortopedycznymi</span>
-          </div>
-          <div class="metrics-bar__item">
-            <dt>Skuteczność redukcji bólu</dt>
-            <dd class="mono">94%</dd>
-            <span class="metrics-bar__note">Pacjentów unika zabiegu operacyjnego kręgosłupa</span>
-          </div>
-          <div class="metrics-bar__item">
-            <dt>Polisa OC Medyczna</dt>
-            <dd class="mono">450 000 zł</dd>
-            <span class="metrics-bar__note">Pełne bezpieczeństwo Podmiotu Leczniczego</span>
-          </div>
-          <div class="metrics-bar__item">
-            <dt>Zasięg wizyt domowych</dt>
-            <dd class="mono">do 65 km</dd>
-            <span class="metrics-bar__note">Ełk, Giżycko, Suwałki, Augustów, Olecko, Gołdap, Grajewo</span>
-          </div>
-        </dl>
       </div>
     </section>
 
-    <!-- INTERACTIVE PAIN & SYMPTOM SELECTOR -->
-    <section class="section section--alt" id="diagnoza">
+    <!-- ======================================================================
+         2. CREDENTIALS & CLINICAL METHODS TICKER BAR
+         ====================================================================== -->
+    <section class="trust-strip-section" aria-label="Certyfikowane metody terapeutyczne i rejestry medyczne">
       <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">Interaktywna wstępna diagnostyka</span>
-          <h2 class="section-title">Gdzie odczuwasz ból lub ograniczenie ruchu?</h2>
+        <p class="trust-strip__caption mono">CERTYFIKOWANE METODY KLINICZNE I GWARANCJE BEZPIECZEŃSTWA PACJENTA</p>
+        <div class="trust-logos-grid">
+          <div class="trust-logo-pill">
+            <span class="trust-logo-pill__code mono">KIF • PWZFz 41892</span>
+            <strong>Krajowa Izba Fizjoterapeutów</strong>
+          </div>
+          <div class="trust-logo-pill">
+            <span class="trust-logo-pill__code mono">MDT • A–D</span>
+            <strong>Instytut McKenziego Polska</strong>
+          </div>
+          <div class="trust-logo-pill">
+            <span class="trust-logo-pill__code mono">OMT • MT-KE</span>
+            <strong>Kaltenborn-Evjenth Concept</strong>
+          </div>
+          <div class="trust-logo-pill">
+            <span class="trust-logo-pill__code mono">MCTA • MWM</span>
+            <strong>Mulligan Concept International</strong>
+          </div>
+          <div class="trust-logo-pill">
+            <span class="trust-logo-pill__code mono">EFDMA • IFDMO</span>
+            <strong>Fascial Distortion Model (FDM)</strong>
+          </div>
+          <div class="trust-logo-pill">
+            <span class="trust-logo-pill__code mono">RPWDL • OC</span>
+            <strong>Podmiot Leczniczy (450 000 zł)</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. "THE OLD WAY VS. OUR CLINICAL WAY" (Titan Intake Signature Section)
+         ====================================================================== -->
+    <section class="section" id="porownanie">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-pill mono">DLACZEGO TERAPIA CELOWANA?</span>
+          <h2 class="section-title">Zwykłe leczenie objawowe vs. nowoczesna fizjoterapia przyczynowa</h2>
           <p class="section-desc">
-            Wybierz obszar ciała, który sprawia Ci największy dyskomfort. Zobaczysz najczęstsze przyczyny, stosowane przeze mnie metody terapii oraz szacowany plan powrotu do sprawności.
+            Większość pacjentów trafia do mojego gabinetu w Ełku po tygodniach brania tabletek przeciwbólowych lub nieskutecznych zabiegach prądami i laserem. Zobacz, czym różni się praca na przyczynie problemu.
           </p>
         </div>
 
-        <div class="pain-selector">
+        <div class="comparison-grid">
+          <!-- The Old Way -->
+          <div class="comp-card comp-card--old">
+            <div class="comp-card__header">
+              <span class="comp-card__tag mono">PODEJŚCIE STANDARDOWE</span>
+              <h3>Tymczasowe wyciszanie objawów</h3>
+              <p>Skupione na maskowaniu bólu zamiast odbarczenia uciśniętych struktur nerwowych i stawowych.</p>
+            </div>
+            <ul class="comp-list comp-list--negative">
+              <li>
+                <span class="comp-icon" aria-hidden="true">✕</span>
+                <div>
+                  <strong>Wielomiesięczne kolejki na zabiegi</strong>
+                  <span>W stanie ostrej rwy kulszowej lub „postrzału” czekanie kilku miesięcy prowadzi do utrwalenia kompensacji i przewlekłego bólu.</span>
+                </div>
+              </li>
+              <li>
+                <span class="comp-icon" aria-hidden="true">✕</span>
+                <div>
+                  <strong>„Taśmowa” fizykoterapia bez badania manualnego</strong>
+                  <span>Same prądy, pole magnetyczne czy krioterapia po 10 minut nie cofną przepukliny krążka międzykręgowego ani nie odblokują stawu.</span>
+                </div>
+              </li>
+              <li>
+                <span class="comp-icon" aria-hidden="true">✕</span>
+                <div>
+                  <strong>Leki przeciwbólowe i blokady obciążające żołądek</strong>
+                  <span>Tabletki wyłączają alarm bólowy na kilka godzin, przez co pacjent nieświadomie dalej uszkadza przeciążony segment kręgosłupa.</span>
+                </div>
+              </li>
+              <li>
+                <span class="comp-icon" aria-hidden="true">✕</span>
+                <div>
+                  <strong>Konieczność uciążliwego dojazdu w ostrym bólu</strong>
+                  <span>Brak możliwości zamówienia specjalisty z profesjonalnym stołem do domu pacjenta poza dużym miastem.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- The Titan / Modern Clinical Way -->
+          <div class="comp-card comp-card--modern">
+            <div class="comp-card__glow" aria-hidden="true"></div>
+            <div class="comp-card__header">
+              <span class="comp-card__tag comp-card__tag--teal mono">STANDARD MGR MICHAŁA KOWALSKIEGO</span>
+              <h3>Celowana terapia manualna 1-na-1</h3>
+              <p>Precyzyjna diagnostyka biomechaniczna i natychmiastowe wdrożenie terapii już na pierwszej wizycie.</p>
+            </div>
+            <ul class="comp-list comp-list--positive">
+              <li>
+                <span class="comp-icon comp-icon--check" aria-hidden="true">✓</span>
+                <div>
+                  <strong>Termin w 24–48h w stanach ostrych</strong>
+                  <span>Szybka interwencja w pierwszych dniach rwy kulszowej lub zablokowania szyi skraca czas powrotu do sprawności o połowę.</span>
+                </div>
+              </li>
+              <li>
+                <span class="comp-icon comp-icon--check" aria-hidden="true">✓</span>
+                <div>
+                  <strong>Pełne 50–60 minut pracy wyłącznie z Tobą</strong>
+                  <span>Przez całą wizytę pracuję manualnie z jednym pacjentem: od badania rezonansu MRI po terapię tkanek głębokich i mobilizację stawów.</span>
+                </div>
+              </li>
+              <li>
+                <span class="comp-icon comp-icon--check" aria-hidden="true">✓</span>
+                <div>
+                  <strong>94% pacjentów unika operacji kręgosłupa</strong>
+                  <span>Mechaniczna repozycja krążka metodą McKenziego i trakcja Kaltenborn-Evjenth realnie odciążają korzeń nerwowy.</span>
+                </div>
+              </li>
+              <li>
+                <span class="comp-icon comp-icon--check" aria-hidden="true">✓</span>
+                <div>
+                  <strong>Gabinet w Ełku + Mobilny Gabinet w 11 miastach</strong>
+                  <span>Nie możesz usiąść za kierownicą? Przyjadę z profesjonalnym stołem rehabilitacyjnym do Twojego domu (Ełk, Olecko, Giżycko, Suwałki, Augustów i okolice).</span>
+                </div>
+              </li>
+            </ul>
+            <div class="comp-card__footer">
+              <div class="comp-metric">
+                <strong class="mono">1–2 wizyty</strong>
+                <span>do odczuwalnej ulgi w bólu ostrym</span>
+              </div>
+              <a href="#rezerwacja" class="btn btn--primary-pill">
+                <span>Zarezerwuj termin</span>
+                <span class="btn__arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. INTERACTIVE PAIN & SYMPTOM DIAGNOSTIC SELECTOR (Framer Bento Console)
+         ====================================================================== -->
+    <section class="section section--subtle" id="diagnoza">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-pill mono">INTERAKTYWNA DIAGNOSTYKA OBJAWÓW</span>
+          <h2 class="section-title">Gdzie odczuwasz ból lub ograniczenie ruchu?</h2>
+          <p class="section-desc">
+            Wybierz obszar anatomiczny poniżej, aby sprawdzić najczęstszą przyczynę biomechaniczną, stosowany przeze mnie protokół terapii oraz szacowaną liczbę wizyt.
+          </p>
+        </div>
+
+        <div class="pain-console">
           <div class="pain-selector__tabs" role="tablist" aria-label="Wybierz obszar bólu">
             <button type="button" class="pain-tab is-active" role="tab" aria-selected="true" data-pain="ledzwia">
               <span class="pain-tab__badge mono">01</span>
               <div class="pain-tab__text">
                 <strong>Kręgosłup lędźwiowy i rwa kulszowa</strong>
-                <span>Promieniowanie do pośladka/nogi, dyskopatia L4-L5-S1, „postrzał"</span>
+                <span>Promieniowanie do pośladka/nogi, dyskopatia L4-L5-S1, „postrzał”</span>
               </div>
             </button>
             <button type="button" class="pain-tab" role="tab" aria-selected="false" data-pain="szyja">
@@ -260,11 +406,11 @@
           <div class="pain-selector__panel" id="pain-panel" role="tabpanel" aria-live="polite">
             <div class="pain-panel__header">
               <div>
-                <span class="pain-panel__tag" id="pain-tag">Najczęstszy problem (ok. 48% pacjentów)</span>
+                <span class="pain-panel__tag mono" id="pain-tag">Najczęstszy problem (ok. 48% pacjentów)</span>
                 <h3 class="pain-panel__title" id="pain-title">Odcinek lędźwiowy, dyskopatia i rwa kulszowa</h3>
               </div>
               <div class="pain-panel__price-box">
-                <span>Rekomendowana wizyta</span>
+                <span>Rekomendowana sesja</span>
                 <strong class="mono" id="pain-price">180 zł / 55 min</strong>
               </div>
             </div>
@@ -275,7 +421,7 @@
 
             <div class="pain-panel__grid">
               <div class="pain-panel__box">
-                <h4>Typowe objawy, z którymi pomagam:</h4>
+                <h4 class="mono">TYPOWE OBJAWY KLINICZNE</h4>
                 <ul id="pain-symptoms" class="check-list">
                   <li>Ostry ból blokujący ruch przy schylaniu lub wstawaniu z łóżka</li>
                   <li>Promieniowanie bólu lub mrowienie do pośladka, uda i stopy</li>
@@ -283,7 +429,7 @@
                 </ul>
               </div>
               <div class="pain-panel__box">
-                <h4>Jak pracujemy podczas wizyty:</h4>
+                <h4 class="mono">ZASTOSOWANE METODY TERAPII</h4>
                 <ul id="pain-methods" class="method-list">
                   <li>Diagnostyka różnicowa McKenziego i testy neurologiczne</li>
                   <li>Trakcja i mobilizacja stawów kręgosłupa (Kaltenborn-Evjenth)</li>
@@ -298,10 +444,11 @@
                 <span>Tryb: <strong>Gabinet w Ełku lub wizyta domowa (dla pacjentów w stanie ostrym)</strong></span>
               </div>
               <div class="pain-panel__actions">
-                <button type="button" class="btn btn--primary" id="pain-book-btn" data-service="Terapia bólu kręgosłupa i rwy kulszowej">
-                  Umów tę terapię
+                <button type="button" class="btn btn--primary-pill" id="pain-book-btn" data-service="Terapia bólu kręgosłupa i rwy kulszowej">
+                  <span>Umów tę terapię</span>
+                  <span class="btn__arrow" aria-hidden="true">→</span>
                 </button>
-                <a href="tel:+48512840920" class="btn btn--call">
+                <a href="tel:+48512840920" class="btn btn--surface-pill">
                   Zadzwoń — stan ostry
                 </a>
               </div>
@@ -311,15 +458,17 @@
       </div>
     </section>
 
-    <!-- OFFER & TRANSPARENT PRICING -->
+    <!-- ======================================================================
+         5. OFFER & TRANSPARENT PRICING (Framer SaaS Pricing Grid + Switcher)
+         ====================================================================== -->
     <section class="section" id="oferta">
       <div class="container">
         <div class="section-header section-header--split">
           <div>
-            <span class="section-eyebrow">Oferta medyczna i cennik</span>
+            <span class="section-pill mono">OFERTA MEDYCZNA I CENNIK</span>
             <h2 class="section-title">Konkretne usługi dopasowane do przyczyny Twojego bólu</h2>
             <p class="section-desc">
-              Każda wizyta obejmuje diagnostykę funkcjonalną, terapię manualną oraz indywidualny zestaw prostych ćwiczeń do domu. Nie stosuję „taśmowej" fizykoterapii — przez całą godzinę pracuję wyłącznie z Tobą.
+              Każda wizyta obejmuje diagnostykę funkcjonalną, terapię manualną oraz indywidualny zestaw prostych ćwiczeń do domu. Przełącz widok poniżej, aby sprawdzić oszczędności w pakietach rehabilitacyjnych.
             </p>
           </div>
 
@@ -340,9 +489,9 @@
         <div class="services-grid">
           <!-- Service 1 -->
           <article class="service-card service-card--featured">
-            <div class="service-card__ribbon">Najczęściej wybierana</div>
+            <div class="service-card__ribbon mono">NAJCZĘŚCIEJ WYBIERANA</div>
             <div class="service-card__top">
-              <span class="service-card__category">Diagnostyka + Pierwszy zabieg</span>
+              <span class="service-card__category mono">01 • DIAGNOSTYKA + PIERWSZY ZABIEG</span>
               <h3 class="service-card__title">Pierwsza wizyta diagnostyczno-terapeutyczna</h3>
               <p class="service-card__desc">
                 Szczegółowy wywiad medyczny, analiza badań obrazowych (MRI, RTG, TK), testy ortopedyczne i neurologiczne oraz pierwsza pełna sesja terapii manualnej przynosząca ulgę.
@@ -356,14 +505,15 @@
             </ul>
             <div class="service-card__bottom">
               <div class="service-card__pricing">
-                <span class="service-card__time mono">Czas: 60 min</span>
+                <span class="service-card__time mono">CZAS TRWANIA: 60 MIN</span>
                 <div class="service-card__price-row">
                   <strong class="service-card__price mono" data-single="190 zł" data-pack5="167 zł / wiz." data-pack10="152 zł / wiz.">190 zł</strong>
                   <span class="service-card__pack-note mono" data-single-note="Wizyta w gabinecie w Ełku" data-pack5-note="Pakiet 5 wizyt: 835 zł (oszczędzasz 115 zł)" data-pack10-note="Pakiet 10 wizyt: 1 520 zł (oszczędzasz 380 zł)">Wizyta w gabinecie w Ełku</span>
                 </div>
               </div>
-              <button type="button" class="btn btn--primary btn--full js-select-service" data-service="Pierwsza wizyta diagnostyczno-terapeutyczna">
-                Umów wizytę diagnostyczną
+              <button type="button" class="btn btn--primary-pill btn--full js-select-service" data-service="Pierwsza wizyta diagnostyczno-terapeutyczna">
+                <span>Umów wizytę diagnostyczną</span>
+                <span class="btn__arrow" aria-hidden="true">→</span>
               </button>
             </div>
           </article>
@@ -371,10 +521,10 @@
           <!-- Service 2 -->
           <article class="service-card">
             <div class="service-card__top">
-              <span class="service-card__category">Kręgosłup Lędźwiowy / Piersiowy</span>
+              <span class="service-card__category mono">02 • KRĘGOSŁUP LĘDŹWIOWY / PIERSIOWY</span>
               <h3 class="service-card__title">Terapia bólu kręgosłupa, dyskopatii i rwy kulszowej</h3>
               <p class="service-card__desc">
-                Celowana terapia dla osób z przepukliną krążka międzykręgowego, ostrym „postrzałem", rwą kulszową lub udową oraz przewlekłym bólem krzyża od pracy siedzącej lub fizycznej.
+                Celowana terapia dla osób z przepukliną krążka międzykręgowego, ostrym „postrzałem”, rwą kulszową lub udową oraz przewlekłym bólem krzyża od pracy siedzącej lub fizycznej.
               </p>
             </div>
             <ul class="service-card__bullets">
@@ -385,14 +535,15 @@
             </ul>
             <div class="service-card__bottom">
               <div class="service-card__pricing">
-                <span class="service-card__time mono">Czas: 50–55 min</span>
+                <span class="service-card__time mono">CZAS TRWANIA: 50–55 MIN</span>
                 <div class="service-card__price-row">
                   <strong class="service-card__price mono" data-single="180 zł" data-pack5="158 zł / wiz." data-pack10="144 zł / wiz.">180 zł</strong>
                   <span class="service-card__pack-note mono" data-single-note="Gabinet Ełk (+ ewent. dojazd)" data-pack5-note="Pakiet 5 wizyt: 790 zł (oszczędzasz 110 zł)" data-pack10-note="Pakiet 10 wizyt: 1 440 zł (oszczędzasz 360 zł)">Gabinet Ełk (+ ewent. dojazd)</span>
                 </div>
               </div>
-              <button type="button" class="btn btn--outline btn--full js-select-service" data-service="Terapia bólu kręgosłupa i rwy kulszowej">
-                Wybierz usługę
+              <button type="button" class="btn btn--surface-pill btn--full js-select-service" data-service="Terapia bólu kręgosłupa i rwy kulszowej">
+                <span>Wybierz usługę</span>
+                <span class="btn__arrow" aria-hidden="true">→</span>
               </button>
             </div>
           </article>
@@ -400,7 +551,7 @@
           <!-- Service 3 -->
           <article class="service-card">
             <div class="service-card__top">
-              <span class="service-card__category">Szyja, Kark i Głowa</span>
+              <span class="service-card__category mono">03 • SZYJA, KARK I GŁOWA</span>
               <h3 class="service-card__title">Terapia odcinka szyjnego, migren i zawrotów głowy</h3>
               <p class="service-card__desc">
                 Bezpieczna, delikatna praca na tkankach podpotylicznych, obręczy barkowej i kręgosłupie szyjnym. Skuteczna przy napięciowych bólach głowy, szumach usznych i drętwieniu rąk.
@@ -414,14 +565,15 @@
             </ul>
             <div class="service-card__bottom">
               <div class="service-card__pricing">
-                <span class="service-card__time mono">Czas: 50 min</span>
+                <span class="service-card__time mono">CZAS TRWANIA: 50 MIN</span>
                 <div class="service-card__price-row">
                   <strong class="service-card__price mono" data-single="180 zł" data-pack5="158 zł / wiz." data-pack10="144 zł / wiz.">180 zł</strong>
                   <span class="service-card__pack-note mono" data-single-note="Gabinet Ełk (+ ewent. dojazd)" data-pack5-note="Pakiet 5 wizyt: 790 zł (oszczędzasz 110 zł)" data-pack10-note="Pakiet 10 wizyt: 1 440 zł (oszczędzasz 360 zł)">Gabinet Ełk (+ ewent. dojazd)</span>
                 </div>
               </div>
-              <button type="button" class="btn btn--outline btn--full js-select-service" data-service="Terapia odcinka szyjnego i bólów głowy">
-                Wybierz usługę
+              <button type="button" class="btn btn--surface-pill btn--full js-select-service" data-service="Terapia odcinka szyjnego i bólów głowy">
+                <span>Wybierz usługę</span>
+                <span class="btn__arrow" aria-hidden="true">→</span>
               </button>
             </div>
           </article>
@@ -429,7 +581,7 @@
           <!-- Service 4 -->
           <article class="service-card">
             <div class="service-card__top">
-              <span class="service-card__category">Stawy Obwodowe</span>
+              <span class="service-card__category mono">04 • STAWY OBWODOWE</span>
               <h3 class="service-card__title">Rehabilitacja stawów: bark, biodro, kolano, staw skokowy</h3>
               <p class="service-card__desc">
                 Leczenie zespołów bólowych i zwyrodnieniowych stawów (koksartroza, gonartroza, bolesny bark, łokieć tenisisty) oraz usprawnianie po operacjach, endoprotezach i urazach.
@@ -443,14 +595,15 @@
             </ul>
             <div class="service-card__bottom">
               <div class="service-card__pricing">
-                <span class="service-card__time mono">Czas: 50–55 min</span>
+                <span class="service-card__time mono">CZAS TRWANIA: 50–55 MIN</span>
                 <div class="service-card__price-row">
                   <strong class="service-card__price mono" data-single="170 zł" data-pack5="150 zł / wiz." data-pack10="136 zł / wiz.">170 zł</strong>
                   <span class="service-card__pack-note mono" data-single-note="Gabinet Ełk (+ ewent. dojazd)" data-pack5-note="Pakiet 5 wizyt: 750 zł (oszczędzasz 100 zł)" data-pack10-note="Pakiet 10 wizyt: 1 360 zł (oszczędzasz 340 zł)">Gabinet Ełk (+ ewent. dojazd)</span>
                 </div>
               </div>
-              <button type="button" class="btn btn--outline btn--full js-select-service" data-service="Rehabilitacja stawów (bark, biodro, kolano)">
-                Wybierz usługę
+              <button type="button" class="btn btn--surface-pill btn--full js-select-service" data-service="Rehabilitacja stawów (bark, biodro, kolano)">
+                <span>Wybierz usługę</span>
+                <span class="btn__arrow" aria-hidden="true">→</span>
               </button>
             </div>
           </article>
@@ -458,7 +611,7 @@
           <!-- Service 5 -->
           <article class="service-card">
             <div class="service-card__top">
-              <span class="service-card__category">Terapia Tkanek Głębokich</span>
+              <span class="service-card__category mono">05 • TERAPIA TKANEK GŁĘBOKICH</span>
               <h3 class="service-card__title">Terapia powięziowa FDM, igłoterapia i kinesiotaping</h3>
               <p class="service-card__desc">
                 Intensywna terapia ukierunkowana na przewlekłe napięcia mięśniowe, bolesne zrosty pooperacyjne, stany przeciążeniowe oraz ostre urazy więzadłowo-mięśniowe.
@@ -472,23 +625,24 @@
             </ul>
             <div class="service-card__bottom">
               <div class="service-card__pricing">
-                <span class="service-card__time mono">Czas: 50 min</span>
+                <span class="service-card__time mono">CZAS TRWANIA: 50 MIN</span>
                 <div class="service-card__price-row">
                   <strong class="service-card__price mono" data-single="170 zł" data-pack5="150 zł / wiz." data-pack10="136 zł / wiz.">170 zł</strong>
                   <span class="service-card__pack-note mono" data-single-note="Kinesiotaping wliczony w cenę" data-pack5-note="Pakiet 5 wizyt: 750 zł (oszczędzasz 100 zł)" data-pack10-note="Pakiet 10 wizyt: 1 360 zł (oszczędzasz 340 zł)">Kinesiotaping wliczony w cenę</span>
                 </div>
               </div>
-              <button type="button" class="btn btn--outline btn--full js-select-service" data-service="Terapia powięziowa FDM i igłoterapia">
-                Wybierz usługę
+              <button type="button" class="btn btn--surface-pill btn--full js-select-service" data-service="Terapia powięziowa FDM i igłoterapia">
+                <span>Wybierz usługę</span>
+                <span class="btn__arrow" aria-hidden="true">→</span>
               </button>
             </div>
           </article>
 
           <!-- Service 6 -->
           <article class="service-card service-card--home">
-            <div class="service-card__ribbon service-card__ribbon--teal">Dojazd do 11 miast</div>
+            <div class="service-card__ribbon service-card__ribbon--dark mono">DOJAZD DO 11 MIAST</div>
             <div class="service-card__top">
-              <span class="service-card__category">Rehabilitacja Mobilna</span>
+              <span class="service-card__category mono">06 • REHABILITACJA MOBILNA</span>
               <h3 class="service-card__title">Wizyta domowa z dojazdem i profesjonalnym stołem</h3>
               <p class="service-card__desc">
                 Pełnowartościowa wizyta w Twoim domu — dla osób z ostrym bólem kręgosłupa uniemożliwiającym jazdę autem, pacjentów po zabiegach ortopedycznych oraz seniorów.
@@ -502,14 +656,15 @@
             </ul>
             <div class="service-card__bottom">
               <div class="service-card__pricing">
-                <span class="service-card__time mono">Czas: 55–60 min</span>
+                <span class="service-card__time mono">CZAS TRWANIA: 55–60 MIN</span>
                 <div class="service-card__price-row">
                   <strong class="service-card__price mono" data-single="od 200 zł" data-pack5="od 176 zł / wiz." data-pack10="od 160 zł / wiz.">od 200 zł</strong>
                   <span class="service-card__pack-note mono" data-single-note="W Ełku 200 zł (poza Ełkiem + strefa dojazdu)" data-pack5-note="Pakiet 5 wizyt domowych z rabatem -12%" data-pack10-note="Pakiet 10 wizyt domowych z rabatem -20%">W Ełku 200 zł (poza Ełkiem + strefa dojazdu)</span>
                 </div>
               </div>
-              <button type="button" class="btn btn--primary btn--full js-select-service" data-service="Wizyta domowa z dojazdem do pacjenta">
-                Zamów wizytę domową
+              <button type="button" class="btn btn--dark-pill btn--full js-select-service" data-service="Wizyta domowa z dojazdem do pacjenta">
+                <span>Zamów wizytę domową</span>
+                <span class="btn__arrow" aria-hidden="true">→</span>
               </button>
             </div>
           </article>
@@ -517,101 +672,126 @@
       </div>
     </section>
 
-    <!-- VERIFIED QUALIFICATIONS & CREDENTIALS -->
-    <section class="section section--dark" id="kwalifikacje">
+    <!-- ======================================================================
+         6. BENTO GRID: VERIFIED QUALIFICATIONS & COMPLIANCE (Titan Bento Style)
+         ====================================================================== -->
+    <section class="section section--subtle" id="kwalifikacje">
       <div class="container">
-        <div class="qual-grid">
-          <div class="qual-profile">
-            <span class="section-eyebrow section-eyebrow--light">Potwierdzone kwalifikacje medyczne</span>
-            <h2 class="section-title section-title--light">Powierz swoje zdrowie dyplomowanemu fizjoterapeucie z pełnymi uprawnieniami KIF</h2>
-            <p class="qual-profile__lead">
-              Nazywam się <strong>mgr Michał Kowalski</strong>. Jestem absolwentem jednolitych studiów magisterskich na Wydziale Nauk o Zdrowiu Uniwersytetu Medycznego w Białymstoku. Od ponad 11 lat prowadzę praktykę kliniczną skupioną na leczeniu zachowawczym kręgosłupa i stawów obwodowych.
-            </p>
+        <div class="section-header section-header--center">
+          <span class="section-pill mono">POTWIERDZONE KWALIFIKACJE MEDYCZNE</span>
+          <h2 class="section-title">Dyplomowany fizjoterapeuta z pełnymi uprawnieniami KIF i RPWDL</h2>
+          <p class="section-desc">
+            Bezpieczeństwo terapii kręgosłupa wymaga twardych kompetencji medycznych. Każde moje uprawnienie jest jawne i możliwe do natychmiastowej weryfikacji w państwowych rejestrach.
+          </p>
+        </div>
 
-            <div class="qual-portrait-box">
+        <div class="bento-grid">
+          <!-- Bento Card 1: Specialist Profile (Span 7) -->
+          <div class="bento-card bento-card--span-7 bento-card--dark">
+            <div class="bento-card__top-row">
+              <span class="bento-tag mono">PROFIL SPECJALISTY • 11+ LAT PRAKTYKI</span>
+              <span class="bento-status mono">● Aktywne PWZFz 41892</span>
+            </div>
+            <div class="bento-specialist">
               <img
                 src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=700&q=80"
                 alt="mgr Michał Kowalski - magister fizjoterapii w gabinecie w Ełku"
-                width="140"
-                height="140"
+                width="120"
+                height="120"
                 loading="lazy"
-                class="qual-portrait__img"
+                class="bento-specialist__img"
               >
-              <div class="qual-portrait__info">
+              <div>
                 <h3>mgr Michał Kowalski</h3>
-                <p>Magister Fizjoterapii • Terapeuta Manualny</p>
-                <div class="qual-badges-inline">
-                  <span class="mono">PWZFz: 41892</span>
-                  <span class="mono">RPWDL: 000000264819</span>
-                </div>
+                <p class="bento-specialist__role">Magister Fizjoterapii (Uniwersytet Medyczny w Białymstoku) • Certyfikowany Terapeuta Manualny</p>
+                <p class="bento-specialist__bio">
+                  Od ponad 11 lat prowadzę praktykę kliniczną skupioną na nieoperacyjnym leczeniu dyskopatii, ostrej rwy kulszowej oraz zespołów bólowych stawów obwodowych u pacjentów z Ełku, Mazur i Suwalszczyzny.
+                </p>
               </div>
             </div>
-
-            <div class="verification-box">
-              <div class="verification-box__icon" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            <div class="bento-credentials-bar">
+              <div class="bento-cred-item">
+                <span>Krajowy Rejestr Fizjoterapeutów</span>
+                <strong class="mono">PWZFz nr 41892</strong>
               </div>
-              <div>
-                <h4>Jawna weryfikacja w Krajowym Rejestrze Fizjoterapeutów</h4>
-                <p>
-                  Każdy pacjent może zweryfikować moje uprawnienia zawodowe w rejestrze KIF, wpisując numer prawa wykonywania zawodu <strong class="mono">41892</strong>. Praktyka posiada pełne ubezpieczenie OC podmiotu leczniczego na kwotę <strong class="mono">100 000 EUR (ok. 450 000 PLN)</strong>.
-                </p>
+              <div class="bento-cred-item">
+                <span>Rejestr Podmiotów Leczniczych</span>
+                <strong class="mono">RPWDL 000000264819</strong>
+              </div>
+              <div class="bento-cred-item">
+                <span>Ubezpieczenie OC Medyczne</span>
+                <strong class="mono">100 000 EUR (450 000 zł)</strong>
               </div>
             </div>
           </div>
 
-          <div class="qual-certificates">
-            <h3 class="qual-certificates__heading">Ukończone szkolenia podyplomowe i certyfikaty międzynarodowe</h3>
-            <div class="cert-list">
-              <div class="cert-card">
-                <div class="cert-card__meta">
-                  <span class="cert-card__code mono">CERT • MT-KE / OMT</span>
-                  <span class="cert-card__hours mono">320 godz. klinicznych</span>
-                </div>
-                <h4>Terapia Manualna wg koncepcji Kaltenborn-Evjenth</h4>
-                <p>Kompleksowe badanie i leczenie ortopedyczne kręgosłupa lędźwiowego, piersiowego, szyjnego oraz stawów kończyn (moduły UEX, OEX, UWS, OWS, AHS).</p>
-              </div>
-
-              <div class="cert-card">
-                <div class="cert-card__meta">
-                  <span class="cert-card__code mono">CERT • MDT McKenzie</span>
-                  <span class="cert-card__hours mono">Moduły A–D (Instytut McKenziego Polska)</span>
-                </div>
-                <h4>Mechaniczna Diagnoza i Terapia Bólów Kręgosłupa wg McKenziego</h4>
-                <p>Złoty standard w nieoperacyjnym leczeniu przepuklin krążków międzykręgowych, dyskopatii i ostrej rwy kulszowej oraz udowej.</p>
-              </div>
-
-              <div class="cert-card">
-                <div class="cert-card__meta">
-                  <span class="cert-card__code mono">CERT • MULLIGAN A–C</span>
-                  <span class="cert-card__hours mono">Certyfikat międzynarodowy MCTA</span>
-                </div>
-                <h4>Mulligan Concept — Mobilizacje z Ruchem (MWM / NAGs / SNAGs)</h4>
-                <p>Całkowicie bezbolesne techniki mobilizacji stawowych przywracające natychmiastowy zakres ruchu w kręgosłupie szyjnym, barku, biodrze i kolanie.</p>
-              </div>
-
-              <div class="cert-card">
-                <div class="cert-card__meta">
-                  <span class="cert-card__code mono">CERT • IFDMO FDM + PNF</span>
-                  <span class="cert-card__hours mono">Certyfikat Europejski EFDMA</span>
-                </div>
-                <h4>Terapia Powięziowa FDM (Fascial Distortion Model) &amp; PNF Rozwijający</h4>
-                <p>Precyzyjna praca na odkształceniach powięzi oraz torowanie nerwowo-mięśniowe przy niedowładach i zaburzeniach czucia.</p>
-              </div>
+          <!-- Bento Card 2: McKenzie & Kaltenborn (Span 5) -->
+          <div class="bento-card bento-card--span-5">
+            <div class="bento-card__top-row">
+              <span class="bento-tag bento-tag--teal mono">CERT • OMT &amp; MDT</span>
+              <span class="mono">320+ godz. klinicznych</span>
             </div>
+            <h3>Terapia Manualna Kaltenborn-Evjenth &amp; McKenzie (Moduły A–D)</h3>
+            <p>
+              Złoty standard w zachowawczym leczeniu przepuklin krążków międzykręgowych (L4-L5, L5-S1, C5-C7). Pozwala na precyzyjną ocenę kierunku przemieszczenia dysku i bezpieczne odbarczenie korzenia nerwowego.
+            </p>
+            <div class="bento-mini-chips mono">
+              <span>UEX / OEX</span>
+              <span>UWS / OWS</span>
+              <span>AHS</span>
+              <span>McKenzie MDT</span>
+            </div>
+          </div>
+
+          <!-- Bento Card 3: Mulligan Concept (Span 4) -->
+          <div class="bento-card bento-card--span-4">
+            <div class="bento-card__top-row">
+              <span class="bento-tag bento-tag--teal mono">CERT • MULLIGAN A–C</span>
+              <span class="mono">MCTA International</span>
+            </div>
+            <h3>Mulligan Concept — Mobilizacje z Ruchem</h3>
+            <p>
+              Całkowicie bezbolesne techniki mobilizacji stawowych (SNAGs, NAGs, MWM) przywracające natychmiastowy zakres ruchu w szyi, barku, biodrze i kolanie.
+            </p>
+          </div>
+
+          <!-- Bento Card 4: FDM & PNF (Span 4) -->
+          <div class="bento-card bento-card--span-4">
+            <div class="bento-card__top-row">
+              <span class="bento-tag bento-tag--teal mono">CERT • IFDMO FDM + PNF</span>
+              <span class="mono">EFDMA Europe</span>
+            </div>
+            <h3>Terapia Powięziowa FDM &amp; PNF Rozwijający</h3>
+            <p>
+              Intensywna praca na odkształceniach powięzi oraz torowanie nerwowo-mięśniowe przy niedowładach, osłabieniu siły mięśniowej i zaburzeniach czucia.
+            </p>
+          </div>
+
+          <!-- Bento Card 5: Insurance & Refunds (Span 4) -->
+          <div class="bento-card bento-card--span-4 bento-card--mint">
+            <div class="bento-card__top-row">
+              <span class="bento-tag bento-tag--teal mono">REFUNDACJA POLIS</span>
+              <span class="mono">ICD-10 + Faktura</span>
+            </div>
+            <h3>Dokumentacja do zwrotu z ubezpieczeń</h3>
+            <p>
+              Wystawiam pełną dokumentację medyczną oraz faktury za rehabilitację honorowane przez prywatne towarzystwa ubezpieczeniowe (PZU Zdrowie, Allianz, LuxMed, Medicover, Signal Iduna).
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- GALLERY OF CLINICAL REALIZATIONS / CASE STUDIES WITH FILTERS -->
+    <!-- ======================================================================
+         7. GALLERY OF CLINICAL REALIZATIONS / CASE STUDIES WITH FILTERS
+         ====================================================================== -->
     <section class="section" id="realizacje">
       <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">Udokumentowane efekty terapii</span>
+        <div class="section-header section-header--center">
+          <span class="section-pill mono">UDOKUMENTOWANE WYNIKI TERAPII</span>
           <h2 class="section-title">Galeria realizacji i przypadków klinicznych</h2>
           <p class="section-desc">
-            Zobacz rzeczywiste przykłady terapii pacjentów z Ełku i okolicznych miejscowości. Przefiltruj przypadki według dolegliwości i kliknij kartę, aby otworzyć pełny opis protokołu leczenia.
+            Rzeczywiste protokoły terapii pacjentów z Ełku, Giżycka, Suwałk, Augustowa, Olecka i Grajewa. Przefiltruj według dolegliwości i kliknij kartę, aby zobaczyć pełny przebieg leczenia.
           </p>
         </div>
 
@@ -646,12 +826,12 @@
                 height="280"
                 loading="lazy"
               >
-              <span class="case-card__badge">Kręgosłup lędźwiowy &amp; Rwa</span>
+              <span class="case-card__badge mono">Kręgosłup lędźwiowy &amp; Rwa</span>
               <span class="case-card__loc mono">📍 Ełk (Gabinet)</span>
             </div>
             <div class="case-card__body">
               <div class="case-card__vas">
-                <span>Ból przed: <strong class="vas-bad mono">VAS 9/10</strong></span>
+                <span>Przed: <strong class="vas-bad mono">VAS 9/10</strong></span>
                 <span aria-hidden="true">→</span>
                 <span>Po 4 wizytach: <strong class="vas-good mono">VAS 1/10</strong></span>
               </div>
@@ -662,7 +842,7 @@
               <div class="case-card__footer">
                 <span class="case-card__sessions mono">Liczba wizyt: 4 (3 tyg.)</span>
                 <button type="button" class="btn-link js-open-case" data-case-id="case-1">
-                  Szczegóły terapii →
+                  Protokół terapii →
                 </button>
               </div>
             </div>
@@ -678,12 +858,12 @@
                 height="280"
                 loading="lazy"
               >
-              <span class="case-card__badge">Odcinek szyjny &amp; Głowa</span>
+              <span class="case-card__badge mono">Odcinek szyjny &amp; Głowa</span>
               <span class="case-card__loc mono">📍 Pacjentka z Giżycka</span>
             </div>
             <div class="case-card__body">
               <div class="case-card__vas">
-                <span>Ból przed: <strong class="vas-bad mono">VAS 8/10</strong></span>
+                <span>Przed: <strong class="vas-bad mono">VAS 8/10</strong></span>
                 <span aria-hidden="true">→</span>
                 <span>Po 3 wizytach: <strong class="vas-good mono">VAS 0/10</strong></span>
               </div>
@@ -694,7 +874,7 @@
               <div class="case-card__footer">
                 <span class="case-card__sessions mono">Liczba wizyt: 3 (2 tyg.)</span>
                 <button type="button" class="btn-link js-open-case" data-case-id="case-2">
-                  Szczegóły terapii →
+                  Protokół terapii →
                 </button>
               </div>
             </div>
@@ -710,12 +890,12 @@
                 height="280"
                 loading="lazy"
               >
-              <span class="case-card__badge">Staw barkowy</span>
+              <span class="case-card__badge mono">Staw barkowy</span>
               <span class="case-card__loc mono">📍 Pacjent z Suwałk</span>
             </div>
             <div class="case-card__body">
               <div class="case-card__vas">
-                <span>Zakres ruchu: <strong class="vas-bad mono">75°</strong></span>
+                <span>Zakres: <strong class="vas-bad mono">75°</strong></span>
                 <span aria-hidden="true">→</span>
                 <span>Po 5 wizytach: <strong class="vas-good mono">175° (pełny)</strong></span>
               </div>
@@ -726,7 +906,7 @@
               <div class="case-card__footer">
                 <span class="case-card__sessions mono">Liczba wizyt: 5 (4 tyg.)</span>
                 <button type="button" class="btn-link js-open-case" data-case-id="case-3">
-                  Szczegóły terapii →
+                  Protokół terapii →
                 </button>
               </div>
             </div>
@@ -742,12 +922,12 @@
                 height="280"
                 loading="lazy"
               >
-              <span class="case-card__badge">Wizyta domowa z dojazdem</span>
+              <span class="case-card__badge mono">Wizyta domowa z dojazdem</span>
               <span class="case-card__loc mono">📍 Dojazd: Augustów</span>
             </div>
             <div class="case-card__body">
               <div class="case-card__vas">
-                <span>Ból przed: <strong class="vas-bad mono">VAS 8/10</strong></span>
+                <span>Przed: <strong class="vas-bad mono">VAS 8/10</strong></span>
                 <span aria-hidden="true">→</span>
                 <span>Po pakiecie: <strong class="vas-good mono">Chód bez kul</strong></span>
               </div>
@@ -758,7 +938,7 @@
               <div class="case-card__footer">
                 <span class="case-card__sessions mono">Pakiet: 8 wizyt domowych</span>
                 <button type="button" class="btn-link js-open-case" data-case-id="case-4">
-                  Szczegóły terapii →
+                  Protokół terapii →
                 </button>
               </div>
             </div>
@@ -774,12 +954,12 @@
                 height="280"
                 loading="lazy"
               >
-              <span class="case-card__badge">Kręgosłup lędźwiowy</span>
+              <span class="case-card__badge mono">Kręgosłup lędźwiowy</span>
               <span class="case-card__loc mono">📍 Dojazd: Olecko</span>
             </div>
             <div class="case-card__body">
               <div class="case-card__vas">
-                <span>Ból przed: <strong class="vas-bad mono">VAS 7/10</strong></span>
+                <span>Przed: <strong class="vas-bad mono">VAS 7/10</strong></span>
                 <span aria-hidden="true">→</span>
                 <span>Po 3 wizytach: <strong class="vas-good mono">VAS 0/10</strong></span>
               </div>
@@ -790,7 +970,7 @@
               <div class="case-card__footer">
                 <span class="case-card__sessions mono">Liczba wizyt: 3 (2 tyg.)</span>
                 <button type="button" class="btn-link js-open-case" data-case-id="case-5">
-                  Szczegóły terapii →
+                  Protokół terapii →
                 </button>
               </div>
             </div>
@@ -806,12 +986,12 @@
                 height="280"
                 loading="lazy"
               >
-              <span class="case-card__badge">Staw kolanowy &amp; Biodro</span>
+              <span class="case-card__badge mono">Staw kolanowy &amp; Biodro</span>
               <span class="case-card__loc mono">📍 Pacjent z Grajewa</span>
             </div>
             <div class="case-card__body">
               <div class="case-card__vas">
-                <span>Ból przed: <strong class="vas-bad mono">VAS 8/10</strong></span>
+                <span>Przed: <strong class="vas-bad mono">VAS 8/10</strong></span>
                 <span aria-hidden="true">→</span>
                 <span>Po 4 wizytach: <strong class="vas-good mono">VAS 1/10</strong></span>
               </div>
@@ -822,7 +1002,7 @@
               <div class="case-card__footer">
                 <span class="case-card__sessions mono">Liczba wizyt: 4 (3 tyg.)</span>
                 <button type="button" class="btn-link js-open-case" data-case-id="case-6">
-                  Szczegóły terapii →
+                  Protokół terapii →
                 </button>
               </div>
             </div>
@@ -831,65 +1011,77 @@
       </div>
     </section>
 
-    <!-- PROCESS TIMELINE: PRZEBIEG WSPÓŁPRACY -->
-    <section class="section section--alt" id="przebieg">
+    <!-- ======================================================================
+         8. HOW IT WORKS: 4-STEP CLINICAL WORKFLOW PIPELINE
+         ====================================================================== -->
+    <section class="section section--subtle" id="przebieg">
       <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">Przejrzysty proces leczenia</span>
-          <h2 class="section-title">Jak przebiega współpraca krok po kroku?</h2>
+        <div class="section-header section-header--center">
+          <span class="section-pill mono">PROCES LECZENIA KROK PO KROKU</span>
+          <h2 class="section-title">Od pierwszego kontaktu do trwałego uwolnienia od bólu</h2>
           <p class="section-desc">
-            Od pierwszego telefonu wiesz dokładnie, jak przygotować się do wizyty, ile potrwa terapia i jakich efektów możesz się spodziewać.
+            Przejrzysty protokół współpracy zaprojektowany tak, abyś już na pierwszym spotkaniu otrzymał trafną diagnozę i odczuwalną ulgę.
           </p>
         </div>
 
         <ol class="process-steps">
           <li class="process-step">
-            <div class="process-step__num mono">01</div>
-            <h3 class="process-step__title">Szybka rezerwacja i wybór trybu</h3>
+            <div class="process-step__top">
+              <span class="process-step__num mono">KROK 01</span>
+              <span class="process-step__time mono">W 24h</span>
+            </div>
+            <h3 class="process-step__title">Rezerwacja gabinetu lub dojazdu</h3>
             <p class="process-step__desc">
-              Dzwonisz lub wypełniasz formularz na stronie. Wybierasz wizytę w gabinecie w <strong>Ełku</strong> albo wizytę z dojazdem do Twojego domu (m.in. Olecko, Giżycko, Suwałki, Augustów, Grajewo, Gołdap).
+              Dzwonisz lub wypełniasz formularz. Wybierasz wizytę w gabinecie w <strong>Ełku</strong> albo dojazd do domu (Olecko, Giżycko, Suwałki, Augustów, Grajewo, Gołdap i okolice).
             </p>
-            <span class="process-step__meta mono">Terminy pilne nawet w 24h</span>
           </li>
 
           <li class="process-step">
-            <div class="process-step__num mono">02</div>
-            <h3 class="process-step__title">Szczegółowa diagnostyka przyczyny</h3>
+            <div class="process-step__top">
+              <span class="process-step__num mono">KROK 02</span>
+              <span class="process-step__time mono">15–20 min</span>
+            </div>
+            <h3 class="process-step__title">Diagnostyka funkcjonalna i MRI</h3>
             <p class="process-step__desc">
-              Przeprowadzam dokładny wywiad medyczny, analizuję Twoje wyniki badań (rezonans MRI, RTG, TK — jeśli je posiadasz) i wykonuję testy ortopedyczno-neurologiczne, aby znaleźć źródło bólu.
+              Analizuję Twoje badania obrazowe (MRI, RTG, TK) i przeprowadzam celowane testy ortopedyczno-neurologiczne, aby namierzyć pierwotną przyczynę ucisku.
             </p>
-            <span class="process-step__meta mono">15–20 min badania klinicznego</span>
           </li>
 
           <li class="process-step">
-            <div class="process-step__num mono">03</div>
-            <h3 class="process-step__title">Celowana terapia manualna (1-na-1)</h3>
+            <div class="process-step__top">
+              <span class="process-step__num mono">KROK 03</span>
+              <span class="process-step__time mono">35–40 min</span>
+            </div>
+            <h3 class="process-step__title">Terapia manualna 1-na-1</h3>
             <p class="process-step__desc">
-              Już na pierwszej wizycie wykonuję pełny zabieg terapeutyczny: odbarczam uciśnięte struktury nerwowe, mobilizuję zablokowane stawy kręgosłupa i rozluźniam napięte powięzi.
+              Już podczas pierwszej wizyty wykonuję pełny zabieg: odbarczam korzeń nerwowy, mobilizuję zablokowane segmenty kręgosłupa i rozluźniam powięź.
             </p>
-            <span class="process-step__meta mono">Ulga odczuwalna po 1. sesji</span>
           </li>
 
           <li class="process-step">
-            <div class="process-step__num mono">04</div>
-            <h3 class="process-step__title">Autoterapia i ochrona przed nawrotem</h3>
+            <div class="process-step__top">
+              <span class="process-step__num mono">KROK 04</span>
+              <span class="process-step__time mono">Trwały efekt</span>
+            </div>
+            <h3 class="process-step__title">Autoterapia i prewencja nawrotów</h3>
             <p class="process-step__desc">
-              Otrzymujesz 2–3 proste, dopasowane ćwiczenia domowe (zajmujące 5 minut dziennie) oraz wskazówki ergonomiczne do pracy i snu, dzięki którym ból nie wraca po zakończeniu terapii.
+              Otrzymujesz 2–3 proste ćwiczenia do domu (5 minut dziennie) oraz korektę ergonomii pracy i snu, dzięki którym problem nie wraca.
             </p>
-            <span class="process-step__meta mono">Trwały efekt bez leków</span>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- SERVICE AREA & INTERACTIVE COST CALCULATOR -->
+    <!-- ======================================================================
+         9. SERVICE AREA & INTERACTIVE COST CALCULATOR (11 CITIES)
+         ====================================================================== -->
     <section class="section" id="obszar">
       <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">Obszar działania i kalkulator kosztów</span>
+        <div class="section-header section-header--center">
+          <span class="section-pill mono">OBSZAR DZIAŁANIA I KALKULATOR KOSZTÓW</span>
           <h2 class="section-title">Gabinet w Ełku oraz wizyty domowe w 11 miejscowościach regionu</h2>
           <p class="section-desc">
-            Jeśli ostry ból kręgosłupa lub stan po operacji utrudnia Ci podróż, przyjadę bezpośrednio do Twojego domu z profesjonalnym stołem rehabilitacyjnym. Kliknij swoją miejscowość poniżej, aby sprawdzić czas i koszt dojazdu.
+            Jeśli ostry ból kręgosłupa lub stan po operacji utrudnia Ci podróż, przyjadę bezpośrednio do Twojego domu z profesjonalnym stołem rehabilitacyjnym. Kliknij swoją miejscowość, aby przeliczyć koszt wizyty lub pakietu.
           </p>
         </div>
 
@@ -897,8 +1089,9 @@
           <!-- Left: Interactive Region Map / City Selector -->
           <div class="area-card">
             <div class="area-card__header">
-              <h3>Obsługiwane miasta i gminy (kliknij miejscowość):</h3>
-              <span class="area-card__sub">Baza wyjazdowa: <strong>Ełk, ul. Armii Krajowej 24/2</strong></span>
+              <span class="mono area-card__eyebrow">SIATKA DOJAZDÓW Z EŁKU</span>
+              <h3>Wybierz swoją miejscowość:</h3>
+              <p class="area-card__sub">Baza stacjonarna: <strong>19-300 Ełk, ul. Armii Krajowej 24/2</strong></p>
             </div>
 
             <div class="city-pills" role="group" aria-label="Wybierz miejscowość do wyliczenia dojazdu">
@@ -952,29 +1145,29 @@
               <div class="zone-legend__item">
                 <span class="zone-dot zone-dot--0"></span>
                 <div>
-                  <strong>Strefa 0 (Ełk i bezpośrednie sąsiedztwo do 8 km)</strong>
-                  <p>Gabinet stacjonarny (od 170 zł) lub wizyta domowa w Ełku bez dopłaty za dojazd (200 zł).</p>
+                  <strong>Strefa 0 — Ełk i bezpośrednie sąsiedztwo (do 8 km)</strong>
+                  <p>Wizyta w gabinecie (od 170 zł) lub wizyta domowa w Ełku bez dopłaty za dojazd (200 zł).</p>
                 </div>
               </div>
               <div class="zone-legend__item">
                 <span class="zone-dot zone-dot--1"></span>
                 <div>
-                  <strong>Strefa I (Stare Juchy, Prostki)</strong>
-                  <p>Dopłata za dojazd do domu pacjenta z pełnym wyposażeniem: <span class="mono">+30 zł</span>.</p>
+                  <strong>Strefa I — Stare Juchy, Prostki</strong>
+                  <p>Dopłata za dojazd do domu pacjenta z mobilnym stołem: <span class="mono">+30 zł</span>.</p>
                 </div>
               </div>
               <div class="zone-legend__item">
                 <span class="zone-dot zone-dot--2"></span>
                 <div>
-                  <strong>Strefa II (Olecko, Grajewo, Rajgród, Wydminy)</strong>
-                  <p>Dopłata za dojazd do domu pacjenta: <span class="mono">+50 zł</span> (przy pakiecie 5/10 wizyt rabat obejmuje całą usługę).</p>
+                  <strong>Strefa II — Olecko, Grajewo, Rajgród, Wydminy</strong>
+                  <p>Dopłata za dojazd: <span class="mono">+50 zł</span> (w pakietach 5/10 wizyt rabat obejmuje całość).</p>
                 </div>
               </div>
               <div class="zone-legend__item">
                 <span class="zone-dot zone-dot--3"></span>
                 <div>
-                  <strong>Strefa III (Giżycko, Augustów, Suwałki, Gołdap)</strong>
-                  <p>Dopłata za dojazd do domu pacjenta: <span class="mono">+80 zł</span>. Możliwość łączenia wizyt dla 2 domowników w jednym koszcie dojazdu.</p>
+                  <strong>Strefa III — Giżycko, Augustów, Suwałki, Gołdap</strong>
+                  <p>Dopłata za dojazd: <span class="mono">+80 zł</span>. Możliwość rehabilitacji 2 domowników podczas jednego przyjazdu.</p>
                 </div>
               </div>
             </div>
@@ -982,8 +1175,9 @@
 
           <!-- Right: Interactive Therapy & Travel Cost Calculator -->
           <div class="calc-card" aria-labelledby="calc-heading">
-            <h3 id="calc-heading" class="calc-card__title">Kalkulator kosztu terapii i dojazdu</h3>
-            <p class="calc-card__sub">Oblicz dokładny koszt pojedynczej wizyty lub pakietu rehabilitacyjnego:</p>
+            <span class="mono calc-card__eyebrow">KALKULATOR PLANU TERAPII</span>
+            <h3 id="calc-heading" class="calc-card__title">Oblicz dokładny koszt wizyty lub pakietu</h3>
+            <p class="calc-card__sub">Zero ukrytych opłat — pełna przejrzystość przed rezerwacją:</p>
 
             <div class="calc-form">
               <div class="form-field">
@@ -1049,8 +1243,9 @@
                 <strong class="calc-total-price mono" id="calc-total">180 zł</strong>
               </div>
 
-              <button type="button" class="btn btn--primary btn--full" id="calc-apply-btn">
-                Przenieś tę wycenę do formularza rezerwacji
+              <button type="button" class="btn btn--primary-pill btn--full" id="calc-apply-btn">
+                <span>Przenieś tę wycenę do rezerwacji</span>
+                <span class="btn__arrow" aria-hidden="true">→</span>
               </button>
             </div>
           </div>
@@ -1058,12 +1253,14 @@
       </div>
     </section>
 
-    <!-- CLIENT TESTIMONIALS / OPINIE PACJENTÓW -->
-    <section class="section section--alt" id="opinie">
+    <!-- ======================================================================
+         10. CLIENT TESTIMONIALS / OPINIE PACJENTÓW
+         ====================================================================== -->
+    <section class="section section--subtle" id="opinie">
       <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">Zweryfikowane opinie pacjentów</span>
-          <h2 class="section-title">Co mówią pacjenci z Ełku, Suwałk, Giżycka i okolic?</h2>
+        <div class="section-header section-header--center">
+          <span class="section-pill mono">ZWERYFIKOWANE OPINIE PACJENTÓW</span>
+          <h2 class="section-title">Zaufanie pacjentów z Ełku, Giżycka, Olecka i Suwałk</h2>
           <p class="section-desc">
             Średnia ocena <strong class="mono">5.0 / 5.0</strong> na podstawie opinii pacjentów po terapii bólu kręgosłupa, rwy kulszowej i rehabilitacji domowej.
           </p>
@@ -1073,11 +1270,11 @@
           <figure class="review-card">
             <div class="review-card__top">
               <div class="stars" aria-label="Ocena 5 na 5">★★★★★</div>
-              <span class="review-card__verified">✓ Zweryfikowany pacjent</span>
+              <span class="review-card__verified mono">✓ ZWERYFIKOWANY PACJENT</span>
             </div>
             <blockquote class="review-card__quote">
               <p>
-                „Trafiłem do Pana Michała z ostrym atakiem rwy kulszowej — nie byłem w stanie przejść z pokoju do kuchni ani usiąść. Pan Michał przyjechał ze stołem do mojego domu w Ełku jeszcze tego samego popołudnia. Po pierwszej wizycie mogłem przespać noc, a po trzeciej wróciłem za kierownicę. Pełen profesjonalizm."
+                „Trafiłem do Pana Michała z ostrym atakiem rwy kulszowej — nie byłem w stanie przejść z pokoju do kuchni ani usiąść. Pan Michał przyjechał ze stołem do mojego domu w Ełku jeszcze tego samego popołudnia. Po pierwszej wizycie mogłem przespać noc, a po trzeciej wróciłem za kierownicę. Pełen profesjonalizm.”
               </p>
             </blockquote>
             <figcaption class="review-card__author">
@@ -1092,11 +1289,11 @@
           <figure class="review-card">
             <div class="review-card__top">
               <div class="stars" aria-label="Ocena 5 na 5">★★★★★</div>
-              <span class="review-card__verified">✓ Zweryfikowana pacjentka</span>
+              <span class="review-card__verified mono">✓ ZWERYFIKOWANA PACJENTKA</span>
             </div>
             <blockquote class="review-card__quote">
               <p>
-                „Dojeżdżałam do gabinetu w Ełku z Giżycka z powodu codziennych bólów karku, zawrotów głowy i drętwienia prawej dłoni. Wcześniej brałam mnóstwo tabletek przeciwbólowych. Pan Michał dokładnie przejrzał mój rezonans szyi, wytłumaczył skąd bierze się ucisk i po 4 wizytach ból głowy zniknął całkowicie!"
+                „Dojeżdżałam do gabinetu w Ełku z Giżycka z powodu codziennych bólów karku, zawrotów głowy i drętwienia prawej dłoni. Wcześniej brałam mnóstwo tabletek przeciwbólowych. Pan Michał dokładnie przejrzał mój rezonans szyi, wytłumaczył skąd bierze się ucisk i po 4 wizytach ból głowy zniknął całkowicie!”
               </p>
             </blockquote>
             <figcaption class="review-card__author">
@@ -1111,11 +1308,11 @@
           <figure class="review-card">
             <div class="review-card__top">
               <div class="stars" aria-label="Ocena 5 na 5">★★★★★</div>
-              <span class="review-card__verified">✓ Zweryfikowany pacjent</span>
+              <span class="review-card__verified mono">✓ ZWERYFIKOWANY PACJENT</span>
             </div>
             <blockquote class="review-card__quote">
               <p>
-                „Zamówiliśmy pakiet 10 wizyt domowych z dojazdem do rodziców w Olecku — tata po operacji biodra, mama z przewlekłą dyskopatią lędźwiową. Punktualność co do minuty, ogromna kultura osobista i świetne podejście do starszych osób. Tata chodzi już samodzielnie bez balkonika."
+                „Zamówiliśmy pakiet 10 wizyt domowych z dojazdem do rodziców w Olecku — tata po operacji biodra, mama z przewlekłą dyskopatią lędźwiową. Punktualność co do minuty, ogromna kultura osobista i świetne podejście do starszych osób. Tata chodzi już samodzielnie bez balkonika.”
               </p>
             </blockquote>
             <figcaption class="review-card__author">
@@ -1130,14 +1327,16 @@
       </div>
     </section>
 
-    <!-- FAQ ACCORDION -->
+    <!-- ======================================================================
+         11. FAQ ACCORDION
+         ====================================================================== -->
     <section class="section" id="faq" aria-labelledby="faq-heading">
       <div class="container faq-container">
-        <div class="section-header">
-          <span class="section-eyebrow">Pytania i odpowiedzi (FAQ)</span>
-          <h2 class="section-title" id="faq-heading">Najczęściej zadawane pytania przed pierwszą wizytą</h2>
+        <div class="section-header section-header--center">
+          <span class="section-pill mono">PYTANIA I ODPOWIEDZI (FAQ)</span>
+          <h2 class="section-title" id="faq-heading">Wszystko, co warto wiedzieć przed pierwszą wizytą</h2>
           <p class="section-desc">
-            Sprawdź praktyczne informacje dotyczące przygotowania do wizyty w gabinecie w Ełku oraz organizacji wizyt domowych w regionie.
+            Praktyczne informacje dotyczące przygotowania do wizyty w gabinecie w Ełku oraz organizacji wizyt domowych w regionie.
           </p>
         </div>
 
@@ -1161,7 +1360,7 @@
           </details>
 
           <details>
-            <summary>Mam ostry ból kręgosłupa („postrzał" / rwa kulszowa) — czy w takim stanie można wykonać terapię?</summary>
+            <summary>Mam ostry ból kręgosłupa („postrzał” / rwa kulszowa) — czy w takim stanie można wykonać terapię?</summary>
             <div class="accordion__content">
               <p>
                 <strong>Tak — im szybciej wdrożymy celowane odciążenie, tym krócej trwa stan zapalny.</strong> W fazie ostrej nie wykonuje się bolesnych ani siłowych zabiegów. Stosuję bezbolesne pozycje ułożeniowe wg metody McKenziego, delikatną trakcję odbarczającą korzeń nerwowy oraz techniki powięziowe, które pozwalają bezpiecznie wyprostować sylwetkę i zmniejszyć ból już podczas pierwszego spotkania.
@@ -1199,136 +1398,145 @@
       </div>
     </section>
 
-    <!-- BOOKING & CONTACT SECTION -->
-    <section class="section section--booking" id="rezerwacja">
+    <!-- ======================================================================
+         12. BOOKING & HIGH-CONVERSION TITAN-STYLE CTA CONTAINER
+         ====================================================================== -->
+    <section class="section section--booking-wrap" id="rezerwacja">
       <div class="container">
-        <div class="booking-grid">
-          <!-- Contact Direct Info -->
-          <div class="booking-info">
-            <span class="section-eyebrow section-eyebrow--light">Szybki kontakt i rezerwacja</span>
-            <h2 class="section-title section-title--light">Umów wizytę w gabinecie w Ełku lub zamów dojazd do domu</h2>
-            <p class="booking-info__lead">
-              Masz silny ból i zależy Ci na jak najszybszym terminie? Zadzwoń bezpośrednio — jeśli prowadzę w danej chwili terapię, oddzwonię do Ciebie zaraz po zakończeniu wizyty (zazwyczaj w ciągu 30–45 minut).
-            </p>
+        <div class="titan-booking-shell">
+          <div class="booking-grid">
+            <!-- Contact Direct Info -->
+            <div class="booking-info">
+              <span class="section-pill section-pill--dark mono">REJESTRACJA WIZYT • EŁK I REGION</span>
+              <h2 class="section-title section-title--light">Zarezerwuj wizytę w gabinecie lub zamów dojazd do domu</h2>
+              <p class="booking-info__lead">
+                Masz silny ból i zależy Ci na pilnym terminie? Zadzwoń bezpośrednio — jeśli w danej chwili prowadzę terapię z pacjentem, oddzwonię do Ciebie zaraz po zakończeniu wizyty (zazwyczaj w ciągu 30–45 minut).
+              </p>
 
-            <div class="contact-cards">
-              <a href="tel:+48512840920" class="contact-card contact-card--highlight">
-                <div class="contact-card__icon" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                </div>
-                <div>
-                  <span class="contact-card__label">Rejestracja telefoniczna i SMS (Pn–Sb 8:00–20:00)</span>
-                  <strong class="contact-card__value mono">+48 512 840 920</strong>
-                </div>
-              </a>
+              <div class="contact-cards">
+                <a href="tel:+48512840920" class="contact-card contact-card--highlight">
+                  <div class="contact-card__icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-card__label">Rejestracja telefoniczna i SMS (Pn–Sb 8:00–20:00)</span>
+                    <strong class="contact-card__value mono">+48 512 840 920</strong>
+                  </div>
+                </a>
 
-              <div class="contact-card">
-                <div class="contact-card__icon" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div class="contact-card">
+                  <div class="contact-card__icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-card__label">Gabinet Stacjonarny (parter, podjazd dla wózków, parking)</span>
+                    <strong class="contact-card__value">19-300 Ełk, ul. Armii Krajowej 24 lok. 2</strong>
+                  </div>
                 </div>
-                <div>
-                  <span class="contact-card__label">Gabinet Stacjonarny (parter, podjazd dla wózków, parking)</span>
-                  <strong class="contact-card__value">19-300 Ełk, ul. Armii Krajowej 24 lok. 2</strong>
-                </div>
-              </div>
 
-              <div class="contact-card">
-                <div class="contact-card__icon" aria-hidden="true">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                </div>
-                <div>
-                  <span class="contact-card__label">Obszar wizyt domowych z dojazdem</span>
-                  <strong class="contact-card__value">Ełk, Olecko, Gołdap, Giżycko, Grajewo, Prostki, Rajgród, Augustów, Suwałki, Stare Juchy, Wydminy</strong>
+                <div class="contact-card">
+                  <div class="contact-card__icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-card__label">Obszar wizyt domowych z dojazdem</span>
+                    <strong class="contact-card__value">Ełk, Olecko, Gołdap, Giżycko, Grajewo, Prostki, Rajgród, Augustów, Suwałki, Stare Juchy, Wydminy</strong>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Interactive Booking Form -->
-          <div class="booking-form-card">
-            <h3 class="booking-form-card__title">Formularz rezerwacji wizyty</h3>
-            <p class="booking-form-card__sub">Wypełnij zgłoszenie — potwierdzę dokładną godzinę telefonicznie lub SMS-em.</p>
-
-            <form id="booking-form" class="booking-form" novalidate>
-              <div class="form-row-2">
-                <div class="form-field">
-                  <label for="book-name">Imię i nazwisko *</label>
-                  <input type="text" id="book-name" name="name" autocomplete="name" required placeholder="np. Jan Nowak">
-                </div>
-                <div class="form-field">
-                  <label for="book-phone">Numer telefonu *</label>
-                  <input type="tel" id="book-phone" name="phone" inputmode="tel" autocomplete="tel" required placeholder="np. 500 600 700">
-                </div>
+            <!-- Interactive Booking Form -->
+            <div class="booking-form-card">
+              <div class="booking-form-card__hdr">
+                <span class="mono">SZYBKA REZERWACJA ONLINE</span>
+                <span class="booking-form-card__status mono">● Wolne terminy</span>
               </div>
+              <h3 class="booking-form-card__title">Formularz umówienia wizyty</h3>
+              <p class="booking-form-card__sub">Wypełnij zgłoszenie — potwierdzę dokładną godzinę telefonicznie lub SMS-em.</p>
 
-              <div class="form-field">
-                <label for="book-service">Wybrana usługa / problem *</label>
-                <select id="book-service" name="service" required>
-                  <option value="Pierwsza wizyta diagnostyczno-terapeutyczna">Pierwsza wizyta diagnostyczno-terapeutyczna (190 zł)</option>
-                  <option value="Terapia bólu kręgosłupa i rwy kulszowej">Terapia bólu kręgosłupa i rwy kulszowej (180 zł)</option>
-                  <option value="Terapia odcinka szyjnego i bólów głowy">Terapia odcinka szyjnego i bólów głowy (180 zł)</option>
-                  <option value="Rehabilitacja stawów (bark, biodro, kolano)">Rehabilitacja stawów: bark, biodro, kolano (170 zł)</option>
-                  <option value="Terapia powięziowa FDM i igłoterapia">Terapia powięziowa FDM i igłoterapia (170 zł)</option>
-                  <option value="Wizyta domowa z dojazdem do pacjenta">Wizyta domowa z dojazdem do pacjenta (od 200 zł)</option>
-                </select>
-              </div>
+              <form id="booking-form" class="booking-form" novalidate>
+                <div class="form-row-2">
+                  <div class="form-field">
+                    <label for="book-name">Imię i nazwisko *</label>
+                    <input type="text" id="book-name" name="name" autocomplete="name" required placeholder="np. Jan Nowak">
+                  </div>
+                  <div class="form-field">
+                    <label for="book-phone">Numer telefonu *</label>
+                    <input type="tel" id="book-phone" name="phone" inputmode="tel" autocomplete="tel" required placeholder="np. 500 600 700">
+                  </div>
+                </div>
 
-              <div class="form-row-2">
                 <div class="form-field">
-                  <label for="book-location">Miejsce wizyty / Miasto *</label>
-                  <select id="book-location" name="location" required>
-                    <option value="Gabinet stacjonarny — Ełk">Gabinet stacjonarny — Ełk</option>
-                    <option value="Wizyta domowa — Ełk i okolice">Wizyta domowa — Ełk i okolice</option>
-                    <option value="Wizyta domowa — Olecko">Wizyta domowa — Olecko</option>
-                    <option value="Wizyta domowa — Giżycko">Wizyta domowa — Giżycko</option>
-                    <option value="Wizyta domowa — Suwałki">Wizyta domowa — Suwałki</option>
-                    <option value="Wizyta domowa — Augustów">Wizyta domowa — Augustów</option>
-                    <option value="Wizyta domowa — Grajewo">Wizyta domowa — Grajewo</option>
-                    <option value="Wizyta domowa — Gołdap">Wizyta domowa — Gołdap</option>
-                    <option value="Wizyta domowa — Prostki">Wizyta domowa — Prostki</option>
-                    <option value="Wizyta domowa — Rajgród">Wizyta domowa — Rajgród</option>
-                    <option value="Wizyta domowa — Stare Juchy">Wizyta domowa — Stare Juchy</option>
-                    <option value="Wizyta domowa — Wydminy">Wizyta domowa — Wydminy</option>
+                  <label for="book-service">Wybrana usługa / problem *</label>
+                  <select id="book-service" name="service" required>
+                    <option value="Pierwsza wizyta diagnostyczno-terapeutyczna">Pierwsza wizyta diagnostyczno-terapeutyczna (190 zł)</option>
+                    <option value="Terapia bólu kręgosłupa i rwy kulszowej">Terapia bólu kręgosłupa i rwy kulszowej (180 zł)</option>
+                    <option value="Terapia odcinka szyjnego i bólów głowy">Terapia odcinka szyjnego i bólów głowy (180 zł)</option>
+                    <option value="Rehabilitacja stawów (bark, biodro, kolano)">Rehabilitacja stawów: bark, biodro, kolano (170 zł)</option>
+                    <option value="Terapia powięziowa FDM i igłoterapia">Terapia powięziowa FDM i igłoterapia (170 zł)</option>
+                    <option value="Wizyta domowa z dojazdem do pacjenta">Wizyta domowa z dojazdem do pacjenta (od 200 zł)</option>
                   </select>
                 </div>
 
-                <div class="form-field">
-                  <label for="book-time">Preferowana pora dnia</label>
-                  <select id="book-time" name="time">
-                    <option value="Pilny termin (stan ostry — jak najszybciej)">Pilny termin (stan ostry — jak najszybciej)</option>
-                    <option value="Rano / Przedpołudnie (8:00 – 12:00)">Rano / Przedpołudnie (8:00 – 12:00)</option>
-                    <option value="Popołudnie (12:00 – 16:00)">Popołudnie (12:00 – 16:00)</option>
-                    <option value="Wieczór po pracy (16:00 – 20:00)">Wieczór po pracy (16:00 – 20:00)</option>
-                  </select>
+                <div class="form-row-2">
+                  <div class="form-field">
+                    <label for="book-location">Miejsce wizyty / Miasto *</label>
+                    <select id="book-location" name="location" required>
+                      <option value="Gabinet stacjonarny — Ełk">Gabinet stacjonarny — Ełk</option>
+                      <option value="Wizyta domowa — Ełk i okolice">Wizyta domowa — Ełk i okolice</option>
+                      <option value="Wizyta domowa — Olecko">Wizyta domowa — Olecko</option>
+                      <option value="Wizyta domowa — Giżycko">Wizyta domowa — Giżycko</option>
+                      <option value="Wizyta domowa — Suwałki">Wizyta domowa — Suwałki</option>
+                      <option value="Wizyta domowa — Augustów">Wizyta domowa — Augustów</option>
+                      <option value="Wizyta domowa — Grajewo">Wizyta domowa — Grajewo</option>
+                      <option value="Wizyta domowa — Gołdap">Wizyta domowa — Gołdap</option>
+                      <option value="Wizyta domowa — Prostki">Wizyta domowa — Prostki</option>
+                      <option value="Wizyta domowa — Rajgród">Wizyta domowa — Rajgród</option>
+                      <option value="Wizyta domowa — Stare Juchy">Wizyta domowa — Stare Juchy</option>
+                      <option value="Wizyta domowa — Wydminy">Wizyta domowa — Wydminy</option>
+                    </select>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="book-time">Preferowana pora dnia</label>
+                    <select id="book-time" name="time">
+                      <option value="Pilny termin (stan ostry — jak najszybciej)">Pilny termin (stan ostry — jak najszybciej)</option>
+                      <option value="Rano / Przedpołudnie (8:00 – 12:00)">Rano / Przedpołudnie (8:00 – 12:00)</option>
+                      <option value="Popołudnie (12:00 – 16:00)">Popołudnie (12:00 – 16:00)</option>
+                      <option value="Wieczór po pracy (16:00 – 20:00)">Wieczór po pracy (16:00 – 20:00)</option>
+                    </select>
+                  </div>
                 </div>
+
+                <div class="form-field">
+                  <label for="book-notes">Krótki opis dolegliwości (opcjonalnie)</label>
+                  <textarea id="book-notes" name="notes" rows="3" placeholder="Np. ból dolnego odcinka kręgosłupa promieniujący do prawej nogi od 4 dni..."></textarea>
+                </div>
+
+                <p class="form-error" id="form-error" hidden role="alert"></p>
+
+                <button type="submit" class="btn btn--primary-pill btn--lg btn--full">
+                  <span>Wyślij zgłoszenie i zarezerwuj termin</span>
+                  <span class="btn__arrow" aria-hidden="true">→</span>
+                </button>
+
+                <p class="form-privacy">
+                  Twoje dane są objęte tajemnicą medyczną i służą wyłącznie do kontaktu w celu rejestracji wizyty fizjoterapeutycznej.
+                </p>
+              </form>
+
+              <!-- Confirmation Message -->
+              <div id="booking-success" class="booking-success" hidden aria-live="polite">
+                <div class="booking-success__icon" aria-hidden="true">✓</div>
+                <h4>Zgłoszenie rezerwacyjne zostało przyjęte!</h4>
+                <p id="booking-success-text">
+                  Dziękuję za kontakt. Zadzwonię pod wskazany numer telefonu w ciągu najbliższych 30–45 minut, aby potwierdzić dokładną godzinę wizyty.
+                </p>
+                <button type="button" class="btn btn--surface-pill" id="booking-reset-btn">
+                  Wyślij kolejne zgłoszenie
+                </button>
               </div>
-
-              <div class="form-field">
-                <label for="book-notes">Krótki opis dolegliwości (opcjonalnie)</label>
-                <textarea id="book-notes" name="notes" rows="3" placeholder="Np. ból dolnego odcinka kręgosłupa promieniujący do prawej nogi od 4 dni..."></textarea>
-              </div>
-
-              <p class="form-error" id="form-error" hidden role="alert"></p>
-
-              <button type="submit" class="btn btn--primary btn--lg btn--full">
-                Wyślij zgłoszenie i zarezerwuj termin
-              </button>
-
-              <p class="form-privacy">
-                Twoje dane są objęte tajemnicą medyczną i służą wyłącznie do kontaktu w celu rejestracji wizyty fizjoterapeutycznej.
-              </p>
-            </form>
-
-            <!-- Confirmation Message -->
-            <div id="booking-success" class="booking-success" hidden aria-live="polite">
-              <div class="booking-success__icon" aria-hidden="true">✓</div>
-              <h4>Zgłoszenie rezerwacyjne zostało przyjęte!</h4>
-              <p id="booking-success-text">
-                Dziękuję za kontakt. Zadzwonię pod wskazany numer telefonu w ciągu najbliższych 30–45 minut, aby potwierdzić dokładną godzinę wizyty.
-              </p>
-              <button type="button" class="btn btn--outline" id="booking-reset-btn">
-                Wyślij kolejne zgłoszenie
-              </button>
             </div>
           </div>
         </div>
@@ -1377,21 +1585,21 @@
 
   <!-- MOBILE THUMB-ZONE STICKY ACTION BAR (<= 720px) -->
   <div class="mobile-sticky-cta" aria-label="Szybki kontakt na telefonie">
-    <a href="tel:+48512840920" class="btn btn--call mobile-sticky-cta__btn">
-      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    <a href="tel:+48512840920" class="btn btn--surface-pill mobile-sticky-cta__btn">
+      <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       <span>Zadzwoń teraz</span>
     </a>
-    <a href="#rezerwacja" class="btn btn--primary mobile-sticky-cta__btn">
-      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+    <a href="#rezerwacja" class="btn btn--primary-pill mobile-sticky-cta__btn">
       <span>Umów wizytę</span>
+      <span aria-hidden="true">→</span>
     </a>
   </div>
 
-  <!-- NATIVE MODAL DIALOG FOR CLINICAL CASE STUDY DETAILS (closedby="any" + light-dismiss fallback) -->
+  <!-- NATIVE MODAL DIALOG FOR CLINICAL CASE STUDY DETAILS -->
   <dialog id="case-modal" class="case-modal" closedby="any" aria-labelledby="modal-case-title">
     <div class="case-modal__inner">
       <form method="dialog" class="case-modal__top">
-        <span class="case-modal__badge" id="modal-case-badge">Przypadek kliniczny</span>
+        <span class="case-modal__badge mono" id="modal-case-badge">Przypadek kliniczny</span>
         <button type="submit" class="case-modal__close" value="close" aria-label="Zamknij okno szczegółów">
           ✕ Zamknij
         </button>
@@ -1431,16 +1639,17 @@
       </div>
 
       <div class="case-modal__actions">
-        <button type="button" class="btn btn--primary" id="modal-book-similar">
-          Mam podobny problem — umów wizytę
+        <button type="button" class="btn btn--primary-pill" id="modal-book-similar">
+          <span>Mam podobny problem — umów wizytę</span>
+          <span class="btn__arrow" aria-hidden="true">→</span>
         </button>
         <form method="dialog">
-          <button type="submit" class="btn btn--outline" value="cancel">Wróć do galerii</button>
+          <button type="submit" class="btn btn--surface-pill" value="cancel">Wróć do galerii</button>
         </form>
       </div>
     </div>
   </dialog>
 
-  <script src="app.js?v=1"></script>
+  <script src="app.js?v=2"></script>
 </body>
 </html>
